@@ -1,0 +1,157 @@
+* {
+    color: rgb(44, 40, 40);
+    background: rgb(73, 51, 51);
+    box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  html {
+    height: 100vh; /*Optional*/
+    width: 100vw; /*Optional*/
+    font-family: Verdana, Helvetica;
+   scroll-behavior: smooth;
+  }
+  
+  html, body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+  align-content: center; /*It only works if wrap is activated*/
+  column-gap:  90px;
+  row-gap: 30px;
+  }
+  
+  header {
+    margin-top: 100px;
+  }
+  
+  img {
+    width:250px;
+  }
+  
+  h1 {
+    color: white;
+   
+  }
+  
+  #phone-case {
+    background: black;
+    width: 270px;
+    height: 500px;
+    border-radius: 15px;
+    position: relative; 
+  }
+  
+  
+  /* EVERYTHING INSIDE THE PHONE CASE--------------------------------------*/
+  #phone-lens {
+    background: rgb(98, 91, 91);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 17px;
+    left: 130px;
+  }
+  
+  #phone-screen {
+    background: white;
+      width: 230px;
+    height: 400px;
+    top: 44px;
+    left: 20px;
+  }
+  
+  #phone-screen, #phone-lens,label,#clear-btn, #check-btn, 
+  #results-div  {
+    position: absolute;
+  }
+  
+  label, input, #results-div, #results-div * {
+    background: white;
+  }
+  
+  label {
+    top: 20px;
+    left: 5px;
+  }
+  
+  input {
+    display: block;
+    margin-top: 20px;
+    height: 38px;
+    width: 220px;
+    color: black;
+    background: rgb(218, 216, 226);
+    font-size: 20px;
+    font-family: Times New Roman;
+  }
+  
+  #results-div {
+    top: 110px;
+    width: 220px; /*Same as input*/;
+    left: 5px; /*Same as label*/
+    height: 280px;
+    overflow-y:auto; 
+    /*The arrows appear only when they are needed*/
+  }
+  
+  .border {
+    border: 1px solid black;
+  }
+  
+  
+  p {
+    border: 1px solid black;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /*To mitigate the additional line between paragraphs */
+  }
+  
+  .validNumber, .invalidNumber {
+      font-size: 20px;
+      font-family: Arial;
+    }
+  
+    .validNumber {
+      color: green;
+    }
+  
+  .inValidNumber {
+      color: red;
+    }
+  
+  #check-btn, #clear-btn {
+    top: 460px;
+    width: 97px;
+    height: 30px;
+     background: linear-gradient(rgb(248, 246, 255) , rgb(197, 195, 207) 80%);
+     font-size: 20px;
+     cursor: pointer;
+  }
+  
+  #check-btn:hover, #clear-btn:hover {
+     background: rgb(238, 236, 249);
+  }
+  
+  #check-btn {
+    left: 28px;
+  }
+  
+  #clear-btn {
+    right: 28px;
+  }
+  
+  /*MEDIA --------------------------------------*/
+  
+  
+  @media screen and (max-width: 250px) {
+  html, body {
+  column-gap:  2px;
+  row-gap: 3px;
+  }
+  
+  header {
+    margin-top: 1px;
+  }
+  }
+  
